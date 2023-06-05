@@ -1,0 +1,18 @@
+// ============ style en ===========
+html[lang="en-US"] body {
+  direction: ltr;
+  text-align: left;
+
+  .navbar_page .nav_auth .language {
+    margin-inline-end: 24px;
+  }
+
+  .header .introduce .info {
+    border-inline-start: 4px solid #fff;
+    padding-inline-start: 20px;
+    border-inline-end: none !important;
+    padding-inline-end: none !important;
+  }
+}
+
+// ============ style en ===========

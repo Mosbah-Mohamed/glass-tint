@@ -1,0 +1,30 @@
+/*============== start up button component============*/
+.up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  // display: none;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 50%;
+  background-color: #2e386b;
+  z-index: 99999;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.5s;
+  // @include centering;
+  @include prefixer(animation, fadeInOut 1s infinite linear, webkit moz o ms);
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+/*============= end up button component==============*/

@@ -1,0 +1,98 @@
+// ================== start checkbox =========
+
+// <div class="form-group fill_check">
+
+// <input type="checkbox" id="item">
+
+// <label for=item>item</label>
+// </div>
+
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input[type="checkbox"] {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.fill_check label {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 9px 0px;
+  color: #3b568f;
+
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    top: 11px;
+    left: -34px;
+    color: #222;
+  }
+}
+
+.fill_check label:before {
+  content: "";
+  -webkit-appearance: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  -webkit-margin-end: 10px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  background: #00c64f;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+
+.fill_check label:after {
+  content: "+";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00c64f;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.fill_check input[type="checkbox"]:checked + label {
+  // background: #ecf2ff;
+  color: #013fcd;
+}
+
+.fill_check input[type="checkbox"]:checked + label:before {
+  // border: 1px solid #f7c553;
+}
+
+.fill_check input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+// ================== end checkbox ===========

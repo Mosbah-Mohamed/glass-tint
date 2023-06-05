@@ -1,0 +1,220 @@
+/*======= start header layout ===============*/
+.header {
+  margin: 30px 0 50px;
+
+  .group_btns {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+
+    .btn-type {
+      width: 106px;
+      height: 40px;
+      border-radius: 35px;
+      color: $black;
+      background: $white;
+
+      &.active {
+        color: $white;
+        background: #d02c30;
+      }
+
+      &:hover {
+        color: $white;
+        background: #d02c30;
+      }
+    }
+  }
+
+  .choose_car {
+    h1,
+    h3 {
+      font-weight: 700;
+      font-size: 36px;
+      text-align: center;
+      color: $white;
+      font-family: "Montserrat-Regular";
+    }
+
+    .image {
+      height: 330px;
+      max-width: 770px;
+      margin: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    button {
+      color: #303030;
+      font-weight: 700;
+      font-size: 14px;
+      background: #ffb800;
+      border-radius: 45px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 253px;
+      height: 56px;
+      margin: auto;
+      border: none;
+      outline: none;
+      transition: 0.5s;
+
+      &:hover {
+        background: $white;
+        color: #000;
+      }
+    }
+
+    &.services {
+      h3 {
+        margin-bottom: 85px;
+      }
+
+      .box {
+        display: flex;
+        padding: 20px 16px;
+        gap: 15px;
+
+        .icon {
+          width: 80px;
+          height: 80px;
+          margin: unset;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .introduce {
+    .info {
+      margin-bottom: 80px;
+      border-inline-end: 4px solid #fff;
+      padding-inline-end: 20px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 36px;
+        color: #ffb800;
+        font-family: "Montserrat-Regular";
+      }
+      p {
+        font-weight: 500;
+        font-size: 24px;
+        color: $white;
+      }
+    }
+
+    .box {
+      background: rgba($color: #fff, $alpha: 0.4);
+      border: 1px solid #ebebeb;
+      box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.03);
+      border-radius: 8px;
+      padding: 33px 0;
+      text-align: center;
+      margin-bottom: 30px;
+
+      .icon {
+        width: 110px;
+        height: 110px;
+        background: #f5f5f5;
+        border-radius: 50%;
+
+        margin: auto;
+        @include centering;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .title {
+        p {
+          padding-top: 25px;
+          font-weight: 700;
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: block !important;
+}
+
+.owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  top: 50%;
+  left: -19%;
+  transform: translateY(-50%);
+  width: 43px;
+  height: 60px;
+  background: rgba($color: #fff, $alpha: 0.32) !important;
+  color: #fff !important;
+  font-size: 25px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  margin: 0 !important;
+}
+
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -19%;
+  width: 43px;
+  height: 60px;
+  background: rgba($color: #fff, $alpha: 0.32) !important;
+  color: #fff !important;
+  font-size: 25px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  margin: 0 !important;
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  button {
+    width: unset !important;
+  }
+}
+.owl-theme .owl-dots .owl-dot span {
+  background: #869791 !important;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #fff !important;
+}
+@media (max-width: 767px) {
+  .owl-carousel .owl-stage {
+    height: auto;
+  }
+}
+
+// very very important to set height in responsive
+
+.owl-item {
+  height: 0;
+}
+.owl-item.active {
+  height: auto;
+}
+/*======= end header layout ===============*/

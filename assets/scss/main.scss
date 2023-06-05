@@ -1,0 +1,63 @@
+// start call sass pages
+
+@import "./Global/helpers/_variables.scss";
+
+@import "./Global/helpers/_mixins.scss";
+
+@import "./Global/layout/_grid.scss";
+
+@import "./Global/components/_buttons.scss";
+
+@import "./Global/components/_headings.scss";
+
+@import "./Global/layout/_globalPages.scss";
+
+@import "./Global/layout/_style-en.scss";
+
+// start layouts
+
+@import "./Global/layout/_navbar.scss";
+
+@import "./Global/layout/footer.scss";
+
+@import "./Global/layout/_header.scss";
+
+// end layouts
+
+// start pages
+
+@import "./Global/pages/home";
+
+@import "./Global/pages/contact";
+
+@import "./Global/pages/About";
+
+@import "./Global/pages/service_page";
+
+@import "./Global/pages/our_works";
+
+@import "./Global/pages/gallery";
+
+@import "./Global/pages/terms";
+
+// start Auth
+
+@import "./Global/AuthScss/signup";
+
+// end Auth
+
+@import "./Global/pages/errorpage";
+
+@import "./Global/layout/_media.scss";
+
+// end pages
+
+// start global components
+
+@import "./Global/components/_up-button.scss";
+
+@import "./Global/components/_checkbox.scss";
+
+// end global components
+
+// end call sass pages

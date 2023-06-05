@@ -1,0 +1,60 @@
+/*=========== start grid layout =====*/
+
+* {
+  @include prefixer(box-sizing, border-box, webkit moz ms o);
+  margin: 0;
+  padding: 0;
+}
+
+.main_layout {
+  background-image: url(@/assets/images/Backgroung.png);
+  width: 100%;
+  // height: 860px;
+  position: relative;
+  background-size: cover;
+
+  > div {
+    z-index: 99;
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    border: none;
+    outline: none;
+    background: #000000;
+    opacity: 0.4;
+    transition: 0.5s;
+
+    &:hover {
+      background: $white;
+      color: #000;
+    }
+  }
+
+  .navbar_page,
+  .footer {
+    background: transparent !important;
+    color: #fff;
+
+    a,
+    h3 {
+      color: #fff !important;
+    }
+  }
+  footer {
+    padding-bottom: 0;
+  }
+  .navbar_page .nav_auth .btns-auth button {
+    background: transparent;
+  }
+}
+
+/*=========== end grid layout =============*/
