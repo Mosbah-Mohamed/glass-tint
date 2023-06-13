@@ -3,7 +3,7 @@
 export default {
   // for build
 
-  // target: "server",
+  target: "static",
 
   head() {
     const i18nHead = this.$nuxtI18nHead({
@@ -72,20 +72,14 @@ export default {
 
       link: [
         {
-          hid: "apple-touch-icon",
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/apple-touch-icon.png",
-        },
-        {
-          rel: "stylesheet",
-          href: "",
+          hid: "icon",
+          rel: "icon",
+          href: "/Favicon.png",
         },
         {
           hid: "icon",
           rel: "icon",
-          type: "image/x-icon",
-          href: "Favicon.png",
+          href: "/Favicon.png",
         },
         ...i18nHead.link,
       ],
@@ -139,10 +133,8 @@ export default {
     "@/plugins/api.js",
     { src: "@/plugins/vee-validate" },
     // for save state even if page reload very important
-    // { src: "@/plugins/vuex-persist", ssr: false },
     { src: "@/plugins/aos", mode: "client" },
     { src: "~/plugins/vue-owl-carousel", mode: "client" },
-    { src: "@/plugins/vue-html2pdf.js", mode: "client", ssr: false },
   ],
 
   // Auto import components
@@ -154,9 +146,6 @@ export default {
 
   // Modules
   modules: [
-    // "@nuxtjs/auth-next",
-    "@nuxtjs/auth",
-    "cookie-universal-nuxt",
     "bootstrap-vue/nuxt",
     "@nuxtjs/i18n",
     "@nuxtjs/axios",
@@ -205,7 +194,7 @@ export default {
   },
 
   axios: {
-    baseURL: "https://emary.azq1.com/GlassTint/api/",
+    baseURL: "https://emary.azq1.com/GlassTint/dashboard/api/",
     retry: { retries: 3 },
     headers: {
       common: {
@@ -216,62 +205,16 @@ export default {
     },
   },
 
-  auth: {
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: "login",
-            method: "post",
-            propertyName: "data.token",
-          },
-          logout: {
-            url: "logout",
-            method: "post",
-            // propertyName: "token",
-          },
-          // register: {
-          //   url: "register",
-          //   method: "post",
-          //   propertyName: "data",
-          // },
-          // user: false,
-          user: { url: "user", method: "get", propertyName: "data" },
-        },
-
-        token: {
-          property: "token",
-          global: true,
-          required: true,
-          type: "Bearer",
-        },
-        cookie: {
-          prefix: "auth.",
-          // options: {
-          //   path: "/",
-          //   expires: 7,
-          // },
-        },
-      },
-    },
-
-    // redirect: {
-    //   login: "/login",
-    //   logout: "/login",
-    //   home: "/",
-    // },
-  },
-
   build: {
     transpile: ["vee-validate/dist/rules"],
 
     // for build folder path in cpanel
 
-    // publicPath: "https://trainees.azq1.com/azm",
+    publicPath: "https://emary.azq1.com/GlassTint/",
   },
 
   router: {
-    // base: "/glasstint/",
+    base: "/GlassTint/",
     //for build path
   },
 };

@@ -1,0 +1,114 @@
+// =================== start franchise ===========
+.franchise {
+  position: relative;
+
+  .side_menu_types {
+    ul {
+      position: relative;
+      z-index: 2;
+      margin-top: 150px;
+      padding: 0 45px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        span {
+          color: #fff;
+
+          &.inline-border {
+            background: #ffb800;
+            width: 20px;
+            height: 4px;
+            background: #ffb800;
+            display: block;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  .image-ceramic {
+    margin-bottom: 40px;
+    text-align: center;
+
+    img {
+      max-height: 600px;
+    }
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+  }
+
+  .galleries {
+    margin-top: 75px;
+    margin-bottom: 40px;
+
+    .image {
+      img {
+        max-height: 600px;
+      }
+    }
+  }
+
+  h2.details {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  p.p-det {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #777;
+  }
+
+  .image-cover {
+    margin: 50px 0 100px;
+    text-align: center;
+    img {
+      max-height: 600px;
+    }
+  }
+
+  h4.automotive {
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  .image-performance {
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      max-height: 290px;
+    }
+  }
+
+  .p-performance {
+    padding-bottom: 50px;
+  }
+}
+
+.franchise .side_menu_types ul li.active_tab {
+  span {
+    color: #ffb800;
+
+    &.inline-border {
+      width: 30px;
+    }
+  }
+}
+// =================== end franchise =============

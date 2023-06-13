@@ -63,7 +63,23 @@ export default {
     GUARANTEE: "الضمان",
     periods: "فترات الضمان لكل منتج",
     nano: "تظليل نانو سيراميك للنوافذ",
-    appointment:"حجز موعد"
+    appointment: "حجز موعد",
+    Define_services: "تحديد الخدمات",
+    time_branch: "تحديد الفرع والوقت",
+    personal_data: "البيانات الشخصية",
+    confirm_pay: "التأكيد والدفع",
+    total_price: "السعر الكلى:",
+    Required_services: "الخدمات المطلوبة:",
+    city: " اختر المدينه ",
+    branch: "اختر الفرغ",
+    branch_city: "إختيار المدينة والفرع",
+    riyal: "ريال",
+    next: "التالى",
+    work_hours: "ساعات عمل",
+    Available_appointments: "المواعيد المتاحه",
+    please_choose: "من فضلك قم باختيار المنطقة والفرع الأقرب لك",
+    choose_date: "من فضلك قم باختيار الموعد المناسب لك",
+    time_date: "الوقت والتاريخ",
   },
 
   buttons: {
@@ -83,6 +99,7 @@ export default {
     phone: "الجوال",
     send: "ارسال",
     time_work: "مواعيد العمل",
+    code: "رمز التحقق",
   },
 
   profile: {},
@@ -100,6 +117,6 @@ export default {
     email_end:
       "يجب أن يكون الحقل {_field_} بريدًا إلكترونيًا صالحًا وينتهي بـ @ gmail.com أو @ yahoo.com",
 
-    // min: "ةنةة",
+    numeric: "{_field_} يمكن أن يحتوي الحقل على أحرف رقمية فقط",
   },
 };

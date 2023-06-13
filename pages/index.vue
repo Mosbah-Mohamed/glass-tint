@@ -1,10 +1,10 @@
 <template>
   <div>
 
-
     <LazyLayoutNavbar />
 
     <LazyHomeHero />
+
     <LazyLayoutFooter />
     <!-- <div class="form-group fill_check">
 
@@ -13,14 +13,8 @@
       <label for=item>item</label>
     </div> -->
 
-    <!-- <LazyLayoutHeader /> -->
-    <!-- <LazyHomeHero />
-    <LazyHomeAboutAzzm />
-    <LazyHomeCourses />
-    <LazyHomeWhyUs />
-    <LazyHomeArticles />
-
-    <div class="chat_icon flex-center" @click="whenUpload">
+    <!--
+      <div class="chat_icon flex-center" @click="whenUpload">
       <img data-src="@/assets/images/chat.svg" title="chat" v-lazy-load alt="chat image" width="100%" height="100%" />
     </div>
 

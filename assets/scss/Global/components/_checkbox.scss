@@ -7,12 +7,13 @@
 // <label for=item>item</label>
 // </div>
 
-.form-group {
+.fill_check {
   display: block;
   margin-bottom: 15px;
+  position: absolute;
 }
 
-.form-group input[type="checkbox"] {
+.fill_check input {
   padding: 0;
   height: initial;
   width: initial;
@@ -74,12 +75,12 @@
   border-radius: 50px;
 }
 
-.fill_check input[type="checkbox"]:checked + label {
+.fill_check input:checked + label {
   // background: #ecf2ff;
   color: #013fcd;
 }
 
-.fill_check input[type="checkbox"]:checked + label:before {
+.fill_check input:checked + label:before {
   // border: 1px solid #f7c553;
 }
 

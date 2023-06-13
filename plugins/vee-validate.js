@@ -14,6 +14,7 @@ import {
   email,
   confirmed,
   regex,
+  numeric,
 } from "vee-validate/dist/rules";
 
 Vue.component("ValidationObserver", ValidationObserver);
@@ -26,6 +27,7 @@ extend("min", min);
 extend("min_value", min_value);
 extend("email", email);
 extend("confirmed", confirmed);
+extend("numeric", numeric);
 
 export default function VeeValidatePlugin({ app }) {
   configure({

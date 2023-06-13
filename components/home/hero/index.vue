@@ -138,6 +138,7 @@ export default {
         console.log(response.data)
 
         this.types = response.data.data.types;
+        this.imageSrc = response.data.data.types[1].image;
         this.features = response.data.data.features;
         this.categories = response.data.data.categories;
 
@@ -176,7 +177,7 @@ export default {
 
   methods: {
 
-    ...mapMutations(['setServices']),
+    ...mapMutations(['setServices', 'setType', 'setCities']),
 
     // update car image
 
@@ -194,12 +195,13 @@ export default {
           type: `${this.type_id}`
         }).then(response => {
 
-          console.log(response.data.data);
+          this.setServices(response.data.data.cats_services)
 
-          this.$store.commit('setServices', response.data.data)
+          this.setCities(response.data.data.cities)
 
+          this.setType(`${this.type_id}`)
 
-          // this.$router.push(this.localePath({ path: `/services` }));
+          this.$router.push(this.localePath({ path: `/services` }));
 
 
         }).catch(error => {
@@ -214,6 +216,8 @@ export default {
     }
 
   }
+
+
 }
 </script>
 

@@ -13,6 +13,14 @@ html[lang="en-US"] body {
     border-inline-end: none !important;
     padding-inline-end: none !important;
   }
+  .service_page .total_box button.Next_first svg {
+    transform: rotate(180deg);
+  }
+
+  .bord_right {
+    border-left: 3px solid #d02c30;
+    border-right: none;
+  }
 }
 
 // ============ style en ===========

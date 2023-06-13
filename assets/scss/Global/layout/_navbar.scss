@@ -12,6 +12,8 @@
     max-width: 136px;
     height: 54px;
     margin-inline-start: auto;
+    position: relative;
+    z-index: 99;
 
     img {
       width: 100%;
@@ -183,5 +185,17 @@ i.nuxt-link-exact-active.nuxt-link-active {
 .nav_items ul li ul li {
   clear: both;
   width: 100%;
+}
+
+.b-sidebar-body {
+  .info {
+    ul {
+      li {
+        a {
+          color: #000 !important;
+        }
+      }
+    }
+  }
 }
 //========== end navbar ===========

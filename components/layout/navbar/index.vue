@@ -19,7 +19,6 @@
 
                 <ul class="dropdown">
                   <li><nuxt-link :to="localePath('/history')">history</nuxt-link></li>
-                  <li><a href="#">Sub-2</a></li>
                 </ul>
 
               </li>
@@ -33,7 +32,7 @@
                 </ul>
 
               </li>
-              <li><nuxt-link :to="localePath('/')">COMMERCIAL FRANCHISE</nuxt-link></li>
+              <li><nuxt-link :to="localePath('/franchise')">COMMERCIAL FRANCHISE</nuxt-link></li>
 
 
             </ul>
@@ -46,11 +45,11 @@
 
             <div class="language">
               <nuxt-link v-if="$i18n.locale == 'en'" :to="switchLocalePath('ar')">
-                <img src="@/assets/images/globe.svg" title=""  alt="globe" width="190" height="53" />
+                <img src="@/assets/images/globe.svg" title="" alt="globe" width="190" height="53" />
                 <span>Arabic</span>
               </nuxt-link>
               <nuxt-link v-else :to="switchLocalePath('en')">
-                <img src="@/assets/images/globe.svg" title=""  alt="globe" width="190" height="53" />
+                <img src="@/assets/images/globe.svg" title="" alt="globe" width="190" height="53" />
                 <span>English</span>
               </nuxt-link>
             </div>
@@ -66,23 +65,6 @@
                 $t('navbar.login') }}</nuxt-link></button>
 
 
-
-              <!-- <div @mouseover="onOver2" @mouseleave="onLeave2" v-if="$auth.loggedIn">
-                <b-dropdown id="dropdown-1" class="profile_im" ref="dropdownLogin">
-
-                  <template #button-content>
-                    <div class="drop_btn">
-                      <img data-src="@/assets/images/learn.png" title="profile" v-lazy-load alt="nav profile" width="190"
-                        height="53" />
-                    </div>
-                  </template>
-
-                  <nuxt-link :to="localePath('/profile/guidetrainer')">{{ $t('hero.profile') }}</nuxt-link>
-                  <b-dropdown-item @click="handleLogOut"> {{ $t('hero.logout') }}</b-dropdown-item>
-
-                </b-dropdown>
-              </div> -->
-
             </div>
 
             <div class="sidebar side_bar_content d-none">
@@ -94,66 +76,17 @@
               <b-sidebar id="sidebar-backdrop" backdrop shadow>
                 <div class="info">
                   <ul>
+                    <li><nuxt-link :to="localePath('/')">NANO CERMIAC WINDOW FILM</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/history')">history</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/gallery')">GALLERY</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/guarantee')">GUARANTEE</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/contact-us')">CONTACT</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/contact-us')">Contact</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/branches')">branches</nuxt-link></li>
+                    <li><nuxt-link :to="localePath('/franchise')">COMMERCIAL FRANCHISE</nuxt-link></li>
 
-                    <li v-if="$auth.loggedIn">
 
-                      <div class="drop_btn">
-                        <img data-src="@/assets/images/learn.png" title="profile"  alt="nav profile"
-                          width="190" height="53" />
-                      </div>
-
-                    </li>
-
-                    <li v-if="$auth.loggedIn">
-                      <nuxt-link :to="localePath('/profile/guidetrainer')">{{ $t('hero.profile') }}</nuxt-link>
-                    </li>
-                    <li v-if="$auth.loggedIn">
-                      <p @click="handleLogOut"> {{ $t('hero.logout') }}</p>
-                    </li>
-
-                    <li><a href="#" aria-label="mainPage" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/')">{{
-                            $t('navbar.home') }}</nuxt-link></a></li>
-                    <li><a href="#" aria-label="about" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/about-us')">{{ $t('navbar.about') }}</nuxt-link></a></li>
-                    <li><a href="#" aria-label="diploma" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/diplomaFilter')">{{ $t('navbar.diploma') }}</nuxt-link></a></li>
-
-                    <li><a href="#" aria-label="course" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/coursesFilter')">{{ $t('navbar.courses') }}</nuxt-link></a></li>
-                    <!-- <li>
-                      <div @mouseover="onOver" @mouseleave="onLeave">
-                        <b-dropdown id="dropdown-1" :text="$t('navbar.courses')" ref="dropdown"
-                          v-for="(item, index) in categories" :key="'k' + index">
-
-                          <b-dropdown-item>{{ item.name }}</b-dropdown-item>
-                          <b-dropdown-item>تحليل الاعمال</b-dropdown-item>
-                          <b-dropdown-item>دوراالدورات المالية</b-dropdown-item>
-                        </b-dropdown>
-                      </div>
-                    </li> -->
-
-                    <li><a href="#" aria-label="articles" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/articles')">{{ $t('navbar.articles') }}</nuxt-link></a></li>
-
-                    <li><a href="#" aria-label="contactUs" target="_blank" rel="noopener"><nuxt-link
-                          :to="localePath('/contact-us')">{{ $t('navbar.contact') }}</nuxt-link></a></li>
                   </ul>
-
-                  <!-- btns-auth  -->
-                  <div class="flex-center">
-                    <button v-if="!$auth.loggedIn" aria-label="account" title="account" class="main--btn"><nuxt-link
-                        :to="localePath('/signup')">{{
-                          $t('navbar.signup') }}</nuxt-link></button>
-
-
-                    <button v-if="!$auth.loggedIn" aria-label="login" title="login" class="second--btn"><nuxt-link
-                        :to="localePath('/login')">{{
-                          $t('navbar.login') }}</nuxt-link></button>
-
-
-                  </div>
-
                 </div>
               </b-sidebar>
 
@@ -164,7 +97,6 @@
         </div>
 
       </div>
-
 
     </div>
   </div>

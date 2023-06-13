@@ -17,7 +17,7 @@ export default {
   },
 
   navbar: {
-    login:"login"
+    login: "login",
   },
 
   footer: {
@@ -62,8 +62,24 @@ export default {
     SERVICES: "OUR SERVICES",
     GUARANTEE: "GUARANTEE",
     periods: "Warranty Periods Per Product",
-    nano:"Nano Ceramic Window Tint",
-    appointment:"Appointment Booking"
+    nano: "Nano Ceramic Window Tint",
+    appointment: "Appointment Booking",
+    Define_services: "Define services",
+    time_branch: "branch and time",
+    Personal_data: "Personal data",
+    confirm_pay: "Confirmation and payment",
+    total_price: "total price:",
+    Required_services: "Required services",
+    city: "choose city",
+    branch: "choose branch",
+    branch_city: "Choose the city and branch",
+    riyal: "riyal",
+    next: "next",
+    work_hours: "work hours",
+    Available_appointments: "Available appointments",
+    please_choose: "Please choose the area and branch closest to you",
+    choose_date: "Please choose the date that suits you",
+    time_date: "time and date",
   },
 
   buttons: {
@@ -82,6 +98,7 @@ export default {
     phone: "phone",
     send: "send",
     time_work: "times of work",
+    code: "code verification",
   },
 
   profile: {},
@@ -99,5 +116,6 @@ export default {
     pa: "{_field_} يجب أن تحتوي كلمة المرور على رمز واحد وحرف كبير على الأقل وأكثر من 9 أحرف",
     email_end:
       "يجب أن يكون الحقل {_field_} بريدًا إلكترونيًا صالحًا وينتهي بـ @ gmail.com أو @ yahoo.com",
+    numeric: "{_field_} field may only contain numeric characters",
   },
 };

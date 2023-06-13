@@ -386,6 +386,10 @@ textarea:focus {
   bottom: 0;
 }
 
+svg {
+  width: 16px;
+}
+
 .paginate {
   display: flex;
   justify-content: center;
@@ -1493,6 +1497,13 @@ html[lang=en-US] body .header .introduce .info {
   -webkit-padding-end: none !important;
           padding-inline-end: none !important;
 }
+html[lang=en-US] body .service_page .total_box button.Next_first svg {
+  transform: rotate(180deg);
+}
+html[lang=en-US] body .bord_right {
+  border-left: 3px solid #d02c30;
+  border-right: none;
+}
 
 .navbar_page {
   padding: 25px 0;
@@ -1503,6 +1514,8 @@ html[lang=en-US] body .header .introduce .info {
   height: 54px;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
+  position: relative;
+  z-index: 99;
 }
 .navbar_page .logo img {
   width: 100%;
@@ -1642,6 +1655,10 @@ html[lang=en-US] body .header .introduce .info {
 .nav_items ul li ul li {
   clear: both;
   width: 100%;
+}
+
+.b-sidebar-body .info ul li a {
+  color: #000 !important;
 }
 
 .footer {
@@ -1990,6 +2007,7 @@ html[lang=en-US] body .header .introduce .info {
   padding-bottom: 17px;
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 .service_page .all_levels {
   min-height: 90vh;
@@ -2000,12 +2018,18 @@ html[lang=en-US] body .header .introduce .info {
   border: 1px solid #d9d9d9;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  padding: 18px 15px;
+  padding: 18px 15px 40px;
   margin-bottom: 25px;
+  min-height: 215px;
 }
 .service_page .all_levels .serv_item .head_item {
   display: flex;
   justify-content: space-between;
+}
+.service_page .all_levels .serv_item .head_item span {
+  -webkit-margin-start: 40px;
+          margin-inline-start: 40px;
+  margin-top: 10px;
 }
 .service_page .all_levels .serv_item .head_item img {
   width: 40px;
@@ -2024,6 +2048,7 @@ html[lang=en-US] body .header .introduce .info {
   font-size: 14px;
   color: #717171;
   padding-bottom: 15px;
+  padding-top: 27px;
 }
 .service_page .all_levels .choose_country {
   color: #fff;
@@ -2044,7 +2069,20 @@ html[lang=en-US] body .header .introduce .info {
 .service_page .all_levels .personal_info .form-group {
   margin-bottom: 20px;
 }
-.service_page .all_levels .personal_info .form-group .check_code {
+.service_page .all_levels .personal_info .form-group .check_code-2 {
+  background: none !important;
+}
+.service_page .all_levels .personal_info .form-group .check_code-2 svg {
+  font-size: 23px;
+}
+.service_page .all_levels .personal_info .form-group .check_code-2.green svg {
+  color: green;
+}
+.service_page .all_levels .personal_info .form-group .check_code-2.red svg {
+  color: red;
+}
+.service_page .all_levels .personal_info .form-group .check_code,
+.service_page .all_levels .personal_info .form-group .check_code-2 {
   background: #006aa7;
   width: 93px;
   height: 35px;
@@ -2167,6 +2205,60 @@ html[lang=en-US] body .header .introduce .info {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.main_box {
+  display: flex;
+  gap: 30px;
+}
+.main_box .total_box {
+  flex: 35%;
+  max-width: 35%;
+}
+.main_box .services_boxes {
+  flex: 68%;
+  max-width: 68%;
+}
+
+.coupon {
+  text-align: center;
+}
+.coupon .code_text {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.coupon form {
+  margin-top: 22px;
+}
+.coupon form .form-group {
+  display: flex;
+  gap: 5px;
+}
+.coupon form .form-group input {
+  max-width: 70%;
+  flex: 70%;
+  height: 30px;
+}
+.coupon form .form-group button {
+  max-width: 30%;
+  flex: 30%;
+  background: #8c8c8c;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.no-padd {
+  padding: 5px !important;
 }
 
 .our_works .box {
@@ -2400,6 +2492,97 @@ html[lang=en-US] body .header .introduce .info {
   color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
   font-size: 32px;
+}
+
+.franchise {
+  position: relative;
+}
+.franchise .side_menu_types ul {
+  position: relative;
+  z-index: 2;
+  margin-top: 150px;
+  padding: 0 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.franchise .side_menu_types ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.franchise .side_menu_types ul li span {
+  color: #fff;
+}
+.franchise .side_menu_types ul li span.inline-border {
+  background: #ffb800;
+  width: 20px;
+  height: 4px;
+  background: #ffb800;
+  display: block;
+  transition: 0.5s;
+}
+.franchise .image-ceramic {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.franchise .image-ceramic img {
+  max-height: 600px;
+}
+.franchise .description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #222222;
+}
+.franchise .galleries {
+  margin-top: 75px;
+  margin-bottom: 40px;
+}
+.franchise .galleries .image img {
+  max-height: 600px;
+}
+.franchise h2.details {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+}
+.franchise p.p-det {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #777;
+}
+.franchise .image-cover {
+  margin: 50px 0 100px;
+  text-align: center;
+}
+.franchise .image-cover img {
+  max-height: 600px;
+}
+.franchise h4.automotive {
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+}
+.franchise .image-performance {
+  margin-bottom: 40px;
+}
+.franchise .image-performance img {
+  width: 100%;
+  max-height: 290px;
+}
+.franchise .p-performance {
+  padding-bottom: 50px;
+}
+
+.franchise .side_menu_types ul li.active_tab span {
+  color: #ffb800;
+}
+.franchise .side_menu_types ul li.active_tab span.inline-border {
+  width: 30px;
 }
 
 @media (min-width: 1200px) {
@@ -2843,12 +3026,13 @@ html[lang=en-US] body .header .introduce .info {
 }
 
 /*============= end up button component==============*/
-.form-group {
+.fill_check {
   display: block;
   margin-bottom: 15px;
+  position: absolute;
 }
 
-.form-group input[type=checkbox] {
+.fill_check input {
   padding: 0;
   height: initial;
   width: initial;
@@ -2908,7 +3092,7 @@ html[lang=en-US] body .header .introduce .info {
   border-radius: 50px;
 }
 
-.fill_check input[type=checkbox]:checked + label {
+.fill_check input:checked + label {
   color: #013fcd;
 }
 
