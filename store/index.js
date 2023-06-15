@@ -130,6 +130,29 @@ export const mutations = {
   setTimeEnd(state, payload) {
     state.time_end = payload;
   },
+
+  SET_BRANCH(state, payload) {
+    state.branch = payload;
+  },
+
+  CLEAR_STORE(state) {
+    // Clear the necessary state properties here
+    state.setting = {};
+    state.type = null;
+    state.services = []; // store when click button appointment
+    state.selectedServices = []; // when choose from services
+    state.ids = [];
+    state.cities = [];
+    state.branch = [];
+    state.date = null;
+    state.personalInfo = [];
+    state.code = null;
+    state.password = null;
+    state.coupon = null;
+    state.times = [];
+    state.time_from = null;
+    state.time_end = null;
+  },
 };
 
 // like methods  it call  with :  this.$store.dispatch('mutation_method_name',updated value)

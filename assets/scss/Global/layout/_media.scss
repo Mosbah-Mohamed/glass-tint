@@ -171,6 +171,13 @@
 }
 
 @media (max-width: 575px) {
+  .date_check {
+    flex-direction: column;
+    margin-bottom: 20px;
+    button {
+      height: 40px;
+    }
+  }
   .owl-theme .owl-nav .owl-prev {
     left: 0px;
     background: #ffb800 !important;

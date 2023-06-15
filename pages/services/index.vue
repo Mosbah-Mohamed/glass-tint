@@ -194,8 +194,15 @@
                     <div class="choose_country second_ch">
                       <h3>{{ $t('pages.time_date') }}</h3>
                       <p>{{ $t('pages.choose_date') }}</p>
-                      <input v-model="date" type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
-                        max="2030-12-31" @input="sendDate">
+                      <div class="date_check flex-center">
+                        <input v-model="date" type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                          max="2030-12-31">
+
+                        <button @click="sendDate">
+                          <b-spinner type="grow" label="Spinning" v-if="loading"></b-spinner>
+                          <span v-else>تحقق</span>
+                        </button>
+                      </div>
                     </div>
 
                   </div>
@@ -577,7 +584,9 @@ export default {
       timeSlots: '',
       selectedTimeSlot: null,
       available_times: false,
-      nextTimeSlot: null
+      nextTimeSlot: null,
+
+      loading: false
 
     };
   },
@@ -598,7 +607,7 @@ export default {
 
   computed: {
 
-    ...mapState(['selectedServices', 'personalInfo']),
+    ...mapState(['branch', 'selectedServices', 'personalInfo']),
     ...mapGetters([
       'getServices', 'getSelectedServices', 'totalSelectedServicesPrice', 'selectedServicesIds',
       'getType', 'getCities', 'getBranch', 'getDate',
@@ -631,7 +640,7 @@ export default {
       'setSelectedServices', 'ADD_SELECTED_SERVICE',
       'REPLACE_SELECTED_SERVICE', 'setBranch', 'setDate',
       'setPersonalInfo', 'setCode', 'setPassword', 'setCoupon',
-      'setTime', 'setTimeFrom', 'setTimeEnd'
+      'setTime', 'setTimeFrom', 'setTimeEnd', 'SET_BRANCH', 'CLEAR_STORE'
     ]),
     ...mapActions(['updateSelectedServices2', 'setPersonalInfoAction']),
 
@@ -645,6 +654,14 @@ export default {
 
     async sendSelectedServices() {
 
+      this.branch = [];
+      this.getBranch = null;
+
+      this.SET_BRANCH([])
+
+      this.show_date = false;
+      this.available_times = false;
+
       try {
 
         await this.$axios.post('choose-city', {
@@ -653,9 +670,13 @@ export default {
           city: `${this.city.id}`
         }).then(response => {
 
+          this.branch = [];
+          this.getBranch = '';
+          this.date = null;
+
           this.setBranch(response.data.data)
 
-          console.log(response.data.data)
+          // console.log(response.data.data)
 
         }).catch(error => {
           console.log(error)
@@ -720,6 +741,8 @@ export default {
 
     async sendDate() {
 
+      this.loading = true;
+
       try {
 
         await this.$axios.post('choose-date', {
@@ -729,6 +752,8 @@ export default {
           branch: `${this.branch.id}`,
           date: `${this.date}`
         }).then(response => {
+
+          this.loading = false;
 
           this.available_times = true;
           this.timeSlots = response.data.data
@@ -874,6 +899,15 @@ export default {
 
         }).then(response => {
 
+          this.$swal.fire({
+            position: 'center',
+            type: 'success',
+            title: "successful order",
+            showConfirmButton: false,
+            timer: 3000
+          });
+
+          this.CLEAR_STORE();
           this.$router.push(this.localePath({ path: `/` }));
 
         }).catch(error => {
@@ -1037,8 +1071,10 @@ export default {
   max-width: 100px;
   height: 40px;
   position: relative;
-  background: rgba($color: #FFF, $alpha: 0.43);
+  // background: rgba($color: #FFF, $alpha: 0.43);
+  background: #FFF;
   border-radius: 15px;
+
   cursor: pointer;
   font-weight: 400;
   font-size: 14px;
@@ -1056,6 +1092,11 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
+
+}
+
+.button_available input[type="radio"]+label {
+  border: 2px solid transparent;
 }
 
 .button_available input[type="radio"] {
@@ -1069,6 +1110,7 @@ export default {
   width: 100%;
   height: 100%;
   color: #000;
+  border: 2px solid #ffb800
 }
 
 .button_available label {

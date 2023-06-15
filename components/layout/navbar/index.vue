@@ -41,7 +41,7 @@
 
         <div class="col-lg-3 col-md-7 col-8 auth_lay">
 
-          <div class="nav_auth ">
+          <div class="nav_auth justify-content-center">
 
             <div class="language">
               <nuxt-link v-if="$i18n.locale == 'en'" :to="switchLocalePath('ar')">
@@ -54,18 +54,6 @@
               </nuxt-link>
             </div>
 
-            <div class="btns-auth ">
-              <!-- <button v-if="!$auth.loggedIn" aria-label="account" title="account" class="main--btn"><nuxt-link
-                  :to="localePath('/signup')">{{
-                    $t('navbar.signup') }}</nuxt-link></button> -->
-
-
-              <!-- v-if="!$auth.loggedIn" -->
-              <button aria-label="login" title="login" class="main--btn"><nuxt-link :to="localePath('/login')">{{
-                $t('navbar.login') }}</nuxt-link></button>
-
-
-            </div>
 
             <div class="sidebar side_bar_content d-none">
               <b-button v-b-toggle.sidebar-backdrop>

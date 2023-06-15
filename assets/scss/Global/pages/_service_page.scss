@@ -328,4 +328,17 @@
   padding: 5px !important;
 }
 
+.date_check {
+  gap: 10px;
+
+  input {
+    flex: 85%;
+    max-width: 85%;
+  }
+
+  button {
+    @include centering;
+    max-width: 150px;
+  }
+}
 // ================== service home ===============

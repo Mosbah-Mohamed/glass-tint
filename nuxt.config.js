@@ -72,14 +72,16 @@ export default {
 
       link: [
         {
-          hid: "icon",
           rel: "icon",
           href: "/Favicon.png",
         },
         {
-          hid: "icon",
           rel: "icon",
-          href: "/Favicon.png",
+          href: "./Favicon.png",
+        },
+        {
+          rel: "icon",
+          href: "Favicon.png",
         },
         ...i18nHead.link,
       ],

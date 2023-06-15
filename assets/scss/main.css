@@ -2261,6 +2261,20 @@ html[lang=en-US] body .bord_right {
   padding: 5px !important;
 }
 
+.date_check {
+  gap: 10px;
+}
+.date_check input {
+  flex: 85%;
+  max-width: 85%;
+}
+.date_check button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
+}
+
 .our_works .box {
   margin-bottom: 24px;
   background: #ffffff;
@@ -2715,6 +2729,13 @@ html[lang=en-US] body .bord_right {
   }
 }
 @media (max-width: 575px) {
+  .date_check {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .date_check button {
+    height: 40px;
+  }
   .owl-theme .owl-nav .owl-prev {
     left: 0px;
     background: #ffb800 !important;
